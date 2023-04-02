@@ -1,0 +1,143 @@
+<!-- Inform it is a HTML file. -->
+<!DOCTYPE html>
+<!-- Starting HTML File -->
+<html lang="en">
+<!-- Header for the HTML page -->
+
+<head>
+  <meta charset="utf-8"> <!-- Using utf-8 formatting -->
+  <title>Biraj Dahal</title> <!-- Title for the website -->
+  <link href="images/Big B.jpeg" rel="icon"> <!-- Wesbite Icon -->
+  <meta name="description" content="Portfolio Website"> <!-- Meta data for the search engines and other web crawlers -->
+  <link rel="stylesheet" href="style.css" /> <!-- Linking css file -->
+  <!-- For the google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <!-- For the google font -->
+  <!-- Font Awesome logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="script.js" async></script> <!-- Linking js file -->
+</head>
+<!-- Body for the HTML page -->
+
+<body>
+  <div class="social-media-icons">
+    <a target="_blank" class="socials" href="https://www.linkedin.com/in/birajdahal/"><i class="fa fa-linkedin"
+        style="font-size:24px"></i></a>
+    <a target="_blank" class="socials" href="https://github.com/biraj-dahal"><i class="fa fa-github"
+        style="font-size:24px"></i></a>
+    <a target="_blank" class="socials" href="mailto:biraj.dahal@bison.howard.edu?"><i class="fa fa-google"
+        style="font-size:24px"></i></a>
+    <a target="_blank" class="socials" href="https://wa.me/qr/24RIOZMWZO33D1"><i class="fa fa-whatsapp"
+        style="font-size:24px"></i></a>
+  </div>
+
+  <section class="Home_Me">
+
+    <div class="first_section">
+      <div class="Logo">
+        <img id="Logo" src="images/Logo.png">
+      </div>
+
+
+      <nav class="Top">
+        <ul>
+          <div class="nav_link" id="About">
+            <li><b>About Me</b></li>
+          </div>
+          <div class="nav_link" id="Resume">
+            <li><b>Resume</b></li>
+          </div>
+          <div class="nav_link" id="Projects">
+            <li><b>Projects</b></li>
+          </div>
+          <div class="nav_link" id="Interests">
+            <li><b>Interests</b></li>
+          </div>
+          <div class="nav_link" id="Contact">
+            <li><b>Contact</b></li>
+          </div>
+
+        </ul>
+
+      </nav>
+      <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+
+    </div>
+
+
+    <div class="second_section">
+      <div class="blank"></div>
+      <div class="selfwrite">
+        <p id="icon_row">
+          <a target="_blank" class="socials" href="https://www.linkedin.com/in/birajdahal/"><i class="fa fa-linkedin"
+              style="font-size:24px"></i></a>
+          <a target="_blank" class="socials" href="https://github.com/biraj-dahal"><i class="fa fa-github"
+              style="font-size:24px"></i></a>
+          <a target="_blank" class="socials" href="mailto:biraj.dahal@bison.howard.edu?"><i class="fa fa-google"
+              style="font-size:24px"></i></a>
+          <a target="_blank" class="socials" href="https://wa.me/qr/24RIOZMWZO33D1"><i class="fa fa-whatsapp"
+              style="font-size:24px"></i></a>
+        </p>
+        <p id="bi">Hey! I'm Biraj.</p>
+        <span id="bbi"></span>
+        <p id="bbbi">Leveraging Mathematics to Enhance Software Development and Machine Learning.</p>
+        <a href="https://drive.google.com/uc?export=download&id=18iXsQPluxdaQcb91CnH8jY0AVBPQdVGb" download>
+          <button id="Download_Resume">Download Resume</button>
+        </a>
+
+        <button class="chat" id="Download_Resume">Chat With Me</button>
+      </div>
+
+      <video id="introvid" src="images/final_intro.mov" loop autoplay muted> </video>
+
+    </div>
+
+  </section>
+
+
+  <section class="About_ME">About Me
+    <div data-aos="fade-in" data-aos-delay="200"><img src="images/biraj_photo.png"></div>
+  </section>
+  <section class="Resume_ME">Resume</section>
+  <section class="Projects_ME">Projects</section>
+  <section class="Interests_ME">Interests</section>
+  <section class="Contact_ME">Contact
+    <center>
+      <div>
+        <form id="form">
+          <label for="fname">First Name</label><br>
+          <input type="text" id="fname" name="fname" placeholder="Please enter your First Name">
+
+          <label for="lname">Last Name</label><br>
+          <input type="text" id="lname" name="lname" placeholder="Please enter your Last Name">
+
+          <input type="button" value="Send me!">
+        </form>
+      </div>
+    </center>
+  </section>
+  <footer></footer>
+  <script>
+    var typed = new Typed('#bbi', {
+      strings: ['Computer Science &amp; Math Major', 'ML/AI Enthusiast', 'Music &amp; Literature Admirer'],
+      loop: true,
+      typeSpeed: 50,
+      backSpeed: 20,
+      backDelay: 2000,
+      showCursor: true
+
+
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

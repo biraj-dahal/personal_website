@@ -1,0 +1,254 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Antic Didone', serif;
+  font-style: bold;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 45%;
+  padding-right:0.5cm ;
+}
+
+.social-media-icons img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.socials{
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 0.2cm;
+  animation: slide-in-right 2s ease-in-out;
+}
+
+p{
+  line-height: 1cm;
+}
+section{
+    height: 100vh;
+    font-size: 20px;
+}
+
+#toggleDark{
+    font-size: 25px;
+    cursor: pointer;
+  padding-top: 0.5cm;
+  margin-left: -0.5cm;
+  animation: slide-in-right 0.8s ease-in-out forwards;
+}
+
+.first_section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+div.Logo{  
+    padding-left: 2.5cm;
+    padding-top: 1.5cm;
+    padding-right: 1cm;
+    padding-bottom: 1.8cm;
+    margin-right: 7.5cm;
+    animation: slide-in-left 2s ease-in-out forwards;
+    cursor: pointer;
+}
+
+@keyframes  slide-in-left {
+    0% {
+      opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+      opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#Logo {
+  max-width: 280px;
+  max-height: 280px;
+  transition: transform 2s ease-in-out; /* Add transition property */
+}
+
+#Logo:hover {
+  transform: skewX(-20deg);
+}
+
+nav.Top{
+    justify-content: center;
+    padding-bottom: 1cm;
+    padding-top: 2cm;
+    animation: slide-in-right 2s ease-in-out; 
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+
+li {
+    width: 150px;
+    text-align: center;
+    padding-top: 0.2cm;
+    padding-bottom: 0.2cm;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_link:active{
+  line-height-step: 20px;
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+li:hover{
+    line-height-step: 20px;
+    background-color: rgba(241, 241, 241, 0.977) ;opacity: 0.5;
+    transform: scale(1.3);  
+
+}
+
+.second_section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.blank{
+  margin: 1cm;
+}
+#introvid{
+  max-width: 800px;
+  max-height: 800px;
+  margin-left: -4cm;
+  margin-right: -2cm;
+  margin-top: -1cm;
+  animation: slide-in-right 0.8s ease-in-out forwards;
+}
+video {
+  transform: scale(-1,1);
+}
+.selfwrite{
+  padding-left: 5cm;
+  padding-right: 4cm;
+  padding-top: 1cm;
+  padding-bottom: 2cm;
+  margin-right: -1cm;
+    color: black;
+    font-size: 60px;
+    animation: slide-in-left 0.8s ease-in-out forwards;
+  transition: all 0.3s ease-in-out;
+}
+#icon_row{
+  margin: 0;
+  padding: 0;
+}
+#bi{
+  margin-top: 0.3cm;
+  padding-top: 0.3cm;
+}
+#bbi{
+  margin-top: 0.3cm;
+  padding-top: 0.3cm;
+  font-size: 40px;
+}
+#bbbi{
+  font-size: 18px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.fa-github:hover{
+  transform: scale(1.3);
+  transition: all 0.4s ease-in-out;
+}
+.fa-google:hover{
+  transform: scale(1.3);
+  transition: all 0.4s ease-in-out;
+}
+.fa-whatsapp:hover{
+  transform: scale(1.3);
+  transition: all 0.4s ease-in-out;
+}
+.fa-linkedin:hover{
+  transform: scale(1.3);
+  transition: all 0.4s ease-in-out;
+}
+
+#Download_Resume{
+  background: none;
+  border-color: inherit;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-style: bold;
+  padding: 10px 25px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.About_ME{
+    height: 100vh;
+    color: black;
+    font-size: 10px;
+    background-color: white;
+
+    background: linear-gradient(to right, white, #b9aeae, #524f4f);
+    background-size: 220% 220%;
+    animation: gradient 5s ease infinite;
+}
+img{
+  max-width: 400px;
+  max-height: 400px;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+footer {
+    height: 500px;
+    background-color: beige;
+}
+
+
+
+
