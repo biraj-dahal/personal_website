@@ -12,6 +12,30 @@ const interests = document.getElementById('Interests');
 const contact = document.getElementById('Contact');
 const chat = document.querySelector('.chat')
 
+let add_mus1 = document.getElementById("changesong1");
+let add_mus2 = document.getElementById("changesong2");
+let add_mus3 = document.getElementById("changesong3");
+const form = document.querySelector("#contact_form");
+const wholeform = document.getElementById('wholeform');
+
+function add_music(event){
+  const fav_song = document.getElementById('favourite-song').value;
+  const f_name = document.getElementById('first-name').value;
+  
+  add_mus1.innerHTML = add_mus2.textContent;
+  add_mus2.innerHTML = add_mus3.textContent;
+  add_mus3.innerHTML = "♫ "+ fav_song;
+  wholeform.innerHTML = `<center>
+    <p>It is so good to know you ${f_name}!</p>
+    <p>I will get back to you as soon as possible.</p>
+    <p>I will make sure to listen your favourite song "${fav_song}" too. </p>
+  </center>`;
+
+  event.preventDefault();
+
+}
+
+
 
 
 toggle.addEventListener('click', function() {
@@ -92,4 +116,6 @@ projects.addEventListener('click', scrollToSection3);
 interests.addEventListener('click', scrollToSection4);
 contact.addEventListener('click', scrollToSection5);
 chat.addEventListener('click', scrollToSection5);
+
+form.addEventListener('submit', add_music);
 
