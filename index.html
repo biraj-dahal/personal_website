@@ -106,22 +106,58 @@
   <section class="Resume_ME">Resume</section>
   <section class="Projects_ME">Projects</section>
   <section class="Interests_ME">Interests</section>
-  <section class="Contact_ME">Contact
-    <center>
-      <div>
-        <form id="form">
-          <label for="fname">First Name</label><br>
-          <input type="text" id="fname" name="fname" placeholder="Please enter your First Name">
 
-          <label for="lname">Last Name</label><br>
-          <input type="text" id="lname" name="lname" placeholder="Please enter your Last Name">
-
-          <input type="button" value="Send me!">
-        </form>
+  <section class="Contact_ME">
+    <div class="form-container">
+      <h2 class="form-heading">Let's Get To Know Each Other?</h2>
+      <div id="wholeform">
+      <form id="contact_form">
+        <div class="form-fields">
+          <div class="form-field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your first name." required>
+          </div>
+          <div class="form-field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your last name."required>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="I would love to hear from you."required></textarea>
+          </div>
+          <div class="form-field">
+            <label for="favourite-song">Favourite Song</label>
+            <textarea id="favourite-song" name="favourite-song" placeholder="What is your music taste like?" required></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button id ="form-submit" type="submit">Send me!</button>
+        </div>
+      </form>
       </div>
+    </div>
+    <div class="form-container">
+      <center>
+      <h2 class="Songs">Songs added by others.</h2>
+    
+      <div id="changesong1">
+      <p id="songs"> ♫ I love country music, especially Take Me Home, Country Roads </p>
+    </div>
+      <div id="changesong2">
+      <p id="songs"> ♫ Thunderstruck - AC/DC </p>
+    </div>
+      <div id="changesong3">
+      <p id="songs"> ♫ Apocalypse is so peaceful. </p>
+    </div>
     </center>
+    </div>
+    <div>
+      <p>All rights reserved © Biraj 2023</p>
+    </div>
+
   </section>
-  <footer></footer>
+
+  <!-- <footer></footer> -->
   <script>
     var typed = new Typed('#bbi', {
       strings: ['Computer Science &amp; Math Major', 'ML/AI Enthusiast', 'Music &amp; Literature Admirer'],
@@ -131,8 +167,9 @@
       backDelay: 2000,
       showCursor: true
 
-
     });
+    
+
   </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
