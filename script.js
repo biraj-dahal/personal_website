@@ -22,14 +22,28 @@ function add_music(event){
   const fav_song = document.getElementById('favourite-song').value;
   const f_name = document.getElementById('first-name').value;
   
-  add_mus1.innerHTML = add_mus2.textContent;
-  add_mus2.innerHTML = add_mus3.textContent;
-  add_mus3.innerHTML = "♫ "+ fav_song;
-  wholeform.innerHTML = `<center>
-    <p>It is so good to know you ${f_name}!</p>
-    <p>I will get back to you as soon as possible.</p>
-    <p>I will make sure to listen your favourite song "${fav_song}" too. </p>
-  </center>`;
+
+  add_mus3.style.opacity = '0';
+  add_mus3.style.transition = 'opacity 1s ease-in-out';
+  
+
+  setTimeout(() => {
+    add_mus1.innerHTML = add_mus2.textContent;
+    add_mus2.innerHTML = add_mus3.textContent;
+    add_mus3.innerHTML = "♫ "+ fav_song;
+    add_mus3.style.opacity = '1'; 
+  }, 1000);
+  wholeform.innerHTML = `
+    <center>
+      <div class="new-content">
+        <p>It is so good to know you ${f_name}!</p>
+        <p>I will get back to you as soon as possible.</p>
+        <p>I will make sure to listen your favourite song "${fav_song}" too. </p>
+      </div>
+    </center>
+  `;
+  const newContent = document.querySelector('.new-content');
+  newContent.classList.add('fade-in');
 
   event.preventDefault();
 
