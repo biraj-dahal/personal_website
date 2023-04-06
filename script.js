@@ -44,6 +44,10 @@ function add_music(event){
   `;
   const newContent = document.querySelector('.new-content');
   newContent.classList.add('fade-in');
+  add_mus1.classList.add('fade-in');
+  add_mus2.classList.add('fade-in');
+  
+
 
   event.preventDefault();
 
