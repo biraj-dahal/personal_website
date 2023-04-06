@@ -217,12 +217,20 @@ a{
 
 .About_ME{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100vh;
     font-size: 10px;
     background-color: inherit;
     
 }
+#ABOUTMECONTENT{
+  margin-bottom:2cm;
+  margin-top:2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
+  font-size: 16px;
+}
+
 img{
   max-width: 400px;
   max-height: 500px;
