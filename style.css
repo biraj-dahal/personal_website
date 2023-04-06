@@ -216,18 +216,23 @@ a{
 }
 
 .About_ME{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    color: black;
     font-size: 10px;
-    background-color: white;
-
-    background: linear-gradient(to right, white, #b9aeae, #524f4f);
-    background-size: 220% 220%;
-    animation: gradient 5s ease infinite;
+    background-color: inherit;
+    
 }
 img{
   max-width: 400px;
-  max-height: 400px;
+  max-height: 500px;
+}
+
+#ABOUTMENAME{
+  margin-top: 2cm;
+  margin-left: 2.5cm;
+  font-size: 40px;
+  
 }
 
 @keyframes gradient {
@@ -393,6 +398,17 @@ h2.Songs{
   to {
     opacity: 1;
   }
+}
+.ABOUTMEPHOTO{
+  display: flex;
+  flex-direction: column;
+  column-gap: 2cm;
+  margin: 4cm;
+}
+.Resume_ME{
+  background: linear-gradient(to right, white, #b9aeae, #524f4f);
+    background-size: 220% 220%;
+    animation: gradient 5s ease infinite;
 }
 
 footer {
