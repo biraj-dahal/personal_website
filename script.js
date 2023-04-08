@@ -19,6 +19,7 @@ const form = document.querySelector("#contact_form");
 const wholeform = document.getElementById('wholeform');
 
 function add_music(event){
+
   const fav_song = document.getElementById('favourite-song').value;
   const f_name = document.getElementById('first-name').value;
   
@@ -72,53 +73,8 @@ toggle.addEventListener('click', function() {
   }
 });
 
-function scrollToSection0() {
-  const section = document.querySelector('.Home_ME');
-  const sectionPosition = section.offsetTop;
-  window.scrollTo({
-    top: sectionPosition,
-    behavior: 'smooth',
-    duration:2000
-  });
-}
-function scrollToSection1() {
-  const section = document.querySelector('.About_ME');
-  const sectionPosition = section.offsetTop;
-  window.scrollTo({
-    top: sectionPosition,
-    behavior: 'smooth',
-    duration:2000
-  });
-}
-function scrollToSection2() {
-  const section = document.querySelector('.Resume_ME');
-  const sectionPosition = section.offsetTop;
-  window.scrollTo({
-    top: sectionPosition,
-    behavior: 'smooth',
-    duration:2000
-  });
-}
-function scrollToSection3() {
-  const section = document.querySelector('.Projects_ME');
-  const sectionPosition = section.offsetTop;
-  window.scrollTo({
-    top: sectionPosition,
-    behavior: 'smooth',
-    duration:2000
-  });
-}
-function scrollToSection4() {
-  const section = document.querySelector('.Interests_ME');
-  const sectionPosition = section.offsetTop;
-  window.scrollTo({
-    top: sectionPosition,
-    behavior: 'smooth',
-    duration:2000
-  });
-}
-function scrollToSection5() {
-  const section = document.querySelector('.Contact_ME');
+function scrollToSection(to_section) {
+  const section = document.querySelector(to_section);
   const sectionPosition = section.offsetTop;
   window.scrollTo({
     top: sectionPosition,
@@ -127,13 +83,83 @@ function scrollToSection5() {
   });
 }
 
-home.addEventListener('click', scrollToSection0);
-about.addEventListener('click', scrollToSection1);
-resume.addEventListener('click', scrollToSection2);
-projects.addEventListener('click', scrollToSection3);
-interests.addEventListener('click', scrollToSection4);
-contact.addEventListener('click', scrollToSection5);
-chat.addEventListener('click', scrollToSection5);
+window.onbeforeunload = function () {
+  window.scrollTo({
+    behavior: 'smooth',
+    duration:2000
+  });
+  
+}
+  
+about.addEventListener('click', function () {scrollToSection('.About_ME')});
+resume.addEventListener('click', function () {scrollToSection('.Resume_ME')});
+projects.addEventListener('click', function () {scrollToSection('.Projects_ME')});
+interests.addEventListener('click', function () {scrollToSection('.Interests_ME')});
+contact.addEventListener('click', function () {scrollToSection('.Contact_ME')});
+chat.addEventListener('click', function () {scrollToSection('.Contact_ME')});
 
-form.addEventListener('submit', add_music);
+const validateForm = (event) => {
 
+  let containsErrors = false;
+
+  var userInputs = document.getElementById("contact_form").elements;
+  for (let i = 0; i < userInputs.length-1; i++) {
+    if (userInputs[i].value.length < 2) {
+      containsErrors = true;
+      userInputs[i].classList.add('error');
+    } else {
+      if (i == 2 && !userInputs[i].value.includes('@')){
+          userInputs[i].classList.add('error');
+          containsErrors= true;
+          alert("Please include your email address too.");
+      }
+      else{
+      userInputs[i].classList.remove('error');
+    }
+    }
+    if (containsErrors) {
+      break; // exit loop if there are errors
+    } 
+    }
+
+  if (containsErrors) {
+    event.preventDefault(); // prevent form submission
+  } else {
+    add_music(); // call add_music if there are no errors
+  }
+}
+
+
+
+
+
+
+// const validateForm = (event) => {
+
+//   let containsErrors = false;
+
+//   var userInputs = document.getElementById("contact_form").elements;
+//   for (let i = 0; i < userInputs.length; i++) {
+//     if (userInputs[i].value.length < 2) {
+//       containsErrors = true;
+//       alert(containsErrors);
+//       userInputs[i].classList.add('error');
+//       event.preventDefault();
+//     }
+//     else {
+//       containsErrors = false;
+//       alert(containsErrors);
+//       userInputs[i].classList.remove('error');
+      
+//     }
+//   }
+//   alert(containsErrors);
+//   if (containsErrors == false){
+    
+//     add_music();
+//   }
+  
+
+// }
+
+form.addEventListener('submit', validateForm);

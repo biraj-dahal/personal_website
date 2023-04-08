@@ -149,6 +149,7 @@ li:hover{
   margin-right: -2cm;
   margin-top: -1cm;
   animation: slide-in-right 0.8s ease-in-out forwards;
+  z-index: -1;
 }
 video {
   transform: scale(-1,1);
@@ -418,6 +419,11 @@ h2.Songs{
   background: linear-gradient(to right, white, #b9aeae, #524f4f);
     background-size: 220% 220%;
     animation: gradient 5s ease infinite;
+}
+
+.error {
+  
+  background:rgb(237, 236, 236);
 }
 
 footer {

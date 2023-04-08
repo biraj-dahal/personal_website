@@ -135,21 +135,21 @@
         <form id="contact_form">
           <div class="form-fields">
             <div class="form-field" data-aos="fade-right">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first-name" placeholder="Your first name." required>
+              <label for="first-name">First Name*</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Your first name."  onkeydown="return /[a-z]/i.test(event.key)" >
             </div>
             <div class="form-field" data-aos="fade-left" data-aos-delay="300">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last-name" placeholder="Your last name." required>
+              <label for="last-name">Last Name* </label>
+              <input type="text" id="last-name" name="last-name" placeholder="Your last name." onkeydown="return /[a-z]/i.test(event.key)" >
             </div>
             <div class="form-field" data-aos="fade-right" data-aos-delay="300">
-              <label for="message">Message & Mail Address</label>
-              <textarea id="message" name="message" placeholder="I would love to hear from you." required></textarea>
+              <label for="message">Mail Address & Message*</label>
+              <textarea id="message" name="message" type = "email" placeholder="I would love to hear from you."></textarea>
             </div>
             <div class="form-field" data-aos="fade-left" data-aos-delay="300">
-              <label for="favourite-song">Favourite Song</label>
+              <label for="favourite-song">Favourite Song*</label>
               <textarea id="favourite-song" name="favourite-song" placeholder="What is your music taste like?"
-                required></textarea>
+                ></textarea>
             </div>
           </div>
           <div class="form-submit" data-aos="fade-up" data-aos-delay="300">
@@ -174,7 +174,7 @@
       </center>
     </div>
     <div>
-      <p>All rights reserved © Biraj 2023</p>
+      <p style="font-size: 14px;">All rights reserved © Biraj 2023</p>
     </div>
 
   </section>
