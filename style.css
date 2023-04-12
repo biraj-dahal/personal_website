@@ -160,7 +160,7 @@ video {
   padding-top: 1cm;
   padding-bottom: 2cm;
   margin-right: -1cm;
-    color: black;
+    color: inherit;
     font-size: 60px;
     animation: slide-in-left 0.8s ease-in-out forwards;
   transition: all 0.3s ease-in-out;
@@ -287,9 +287,14 @@ img{
     justify-content: space-between;
     resize: none;
     font-family: inherit;
+    color: inherit;
+  }
+  input{
     color: black;
   }
-  
+  textarea{
+    color: black;
+  }
   .form-field {
     flex-basis: calc(50% - 10px);
     margin-bottom: 20px;
@@ -306,9 +311,11 @@ img{
     color: inherit;
 
   }
+
   
   .form-field input,
-  .form-field textarea {
+  .form-field textarea,
+  .form-field text {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -317,14 +324,14 @@ img{
     padding: 10px;
     width: 100%;
     resize: none;
-    color: inherit;
+    color: black;
   }
   
   .form-field textarea {
     height: 100px;
     direction: column;
     resize: none;
-    color: inherit;
+    color: black;
     font-family: inherit;
   }
   
