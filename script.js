@@ -22,31 +22,33 @@ function add_music(event){
 
   const fav_song = document.getElementById('favourite-song').value;
   const f_name = document.getElementById('first-name').value;
+
+  
+  // add_mus3.style.transition = 'opacity 1s ease-in-out';
   
 
-  add_mus3.style.opacity = '0';
-  add_mus3.style.transition = 'opacity 1s ease-in-out';
-  
-
-  setTimeout(() => {
     add_mus1.innerHTML = add_mus2.textContent;
     add_mus2.innerHTML = add_mus3.textContent;
     add_mus3.innerHTML = "♫ "+ fav_song;
-    add_mus3.style.opacity = '1'; 
-  }, 1000);
+    
+
   wholeform.innerHTML = `
     <center>
-      <div class="new-content">
+      <div class="new-content" data-aos="fade-up" data-aos-delay="300">
         <p>It is so good to know you ${f_name}!</p>
         <p>I will get back to you as soon as possible.</p>
         <p>I will make sure to listen your favourite song "${fav_song}" too. </p>
       </div>
     </center>
   `;
-  const newContent = document.querySelector('.new-content');
-  newContent.classList.add('fade-in');
+
+
   add_mus1.classList.add('fade-in');
   add_mus2.classList.add('fade-in');
+  add_mus3.classList.add('fade-in');
+
+
+
   
 
 
@@ -128,38 +130,5 @@ const validateForm = (event) => {
     add_music(); // call add_music if there are no errors
   }
 }
-
-
-
-
-
-
-// const validateForm = (event) => {
-
-//   let containsErrors = false;
-
-//   var userInputs = document.getElementById("contact_form").elements;
-//   for (let i = 0; i < userInputs.length; i++) {
-//     if (userInputs[i].value.length < 2) {
-//       containsErrors = true;
-//       alert(containsErrors);
-//       userInputs[i].classList.add('error');
-//       event.preventDefault();
-//     }
-//     else {
-//       containsErrors = false;
-//       alert(containsErrors);
-//       userInputs[i].classList.remove('error');
-      
-//     }
-//   }
-//   alert(containsErrors);
-//   if (containsErrors == false){
-    
-//     add_music();
-//   }
-  
-
-// }
 
 form.addEventListener('submit', validateForm);
