@@ -6,6 +6,7 @@ html, body {
     list-style: none;
     font-family: 'Antic Didone', serif;
   font-style: bold;
+
 }
 
 .social-media-icons {
@@ -428,6 +429,17 @@ h2.Songs{
     animation: gradient 5s ease infinite;
 }
 
+.Interests_ME{
+  
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .error {
   
   background:rgb(237, 236, 236);
@@ -436,6 +448,12 @@ h2.Songs{
 footer {
     height: 200px;
     background-color: beige;
+}
+#text {
+  position: relative;
+  color: inherit;
+  font-size: 150px;
+  z-index: 1;
 }
 
 
