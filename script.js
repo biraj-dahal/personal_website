@@ -18,6 +18,22 @@ let add_mus3 = document.getElementById("changesong3");
 const form = document.querySelector("#contact_form");
 const wholeform = document.getElementById('wholeform');
 
+let get_resume = document.getElementById("Download_Resume");
+let modal = document.getElementById("thanks-modal");
+let modalContent = document.getElementById("modal-content");
+let modal_button = document.getElementById("modal-button");
+
+modal_button.addEventListener('click',function() {
+  modal.style.display = "none";
+}
+)
+get_resume.addEventListener('click', function() {
+  modal.style.display = "flex";
+  setTimeout(function() {
+    modal.style.display = "none";
+  }, 15000); 
+});
+ 
 function add_music(event){
 
   const fav_song = document.getElementById('favourite-song').value;
